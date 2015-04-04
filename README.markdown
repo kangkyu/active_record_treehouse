@@ -1,6 +1,10 @@
 > from ActiveRecord Basics
 [teamtreehouse.com/library/rails-models]()
 
+```
+cd ~/tiny_apps/treehouse_mock_active_record
+```
+
 ###features  
 billing soft "mock_active_record"  
 
@@ -47,3 +51,53 @@ make ["TimeEntry" model] subclass ["AccountEntry" model] and use ["account_entri
   
 remove_another_table  
 "ActiveRecord::SubclassNotFound: Invalid single-table inheritance type: TimeEntry"  
+
+###active_record_note  
+  
+stage 2 video 2  
+  
+---  
+brew install mysql  
+(gem install mysql2)  
+----  
+  
+rails new active_record_treehouse -d mysql  
+cd active_record_treehouse  
+subl .  
+  
+(mysql.server start)  
+  
+rails g model Customer  
+  
+rake db:create  
+rake db:migrate  
+  
+table -> relationship setup  
+  
+stage 2 video 4  
+  
+"single table inheritance" => accounts for employees and customers...  
+(one table for two different models)  
+  
+rails g model Account  
+t.string :type  
+  
+class Customer < Account  
+  
+Customer.first  
+=> nil  
+  
+  
+  
+a = Account.first  
+a.type = "Customer"  
+  
+Customer.first  
+=> works  
+  
+HABTM  
+many to many  
+has_many through  
+  
+join table employees_projects - there's no "employees" table  
+create_join_table  
