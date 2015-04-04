@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Employee.delete_all
-Employee.create([
+Employee.create!([
   {
     name: 'Samson',
     email: 'samson@example.com',
@@ -26,7 +26,7 @@ Employee.create([
 ])
 
 Customer.delete_all
-Customer.create([
+Customer.create!([
   {
     name: 'Mike',
     email: 'mike@example.com',
