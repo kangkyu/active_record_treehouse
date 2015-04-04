@@ -14,7 +14,7 @@
 <table>
   <tr>
     <td><%= entry.time %></td>
-    <td><%= entry.customer.name %></td>
+    <td><%= link_to entry.customer.name, entry.customer %></td>
     <td><%= entry.created_at %></td>
   </tr>
 </table>
