@@ -9,3 +9,13 @@
   <%= f.number_field :time %>
   <%= f.submit %>
 <% end %>
+
+<% @employee.time_entries.each do |entry| %>
+<table>
+  <tr>
+    <td><%= entry.time %></td>
+    <td><%= entry.customer.name %></td>
+    <td><%= entry.created_at %></td>
+  </tr>
+</table>
+<% end %>

@@ -25,6 +25,9 @@ and [submit] user screen moves to...
 user goes to a customer detail page  
 and the customer detail pages shows total time and cost  
 
+user goes to an employee detail page  
+and the page shows time_entries belongs to the employee  
+
 
 ###make models  
 (make tables - mysql)  
