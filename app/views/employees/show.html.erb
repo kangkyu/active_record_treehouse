@@ -1,0 +1,11 @@
+<h2><%= @employee.name %></h2>
+
+<p><%= @employee.inspect %></p>
+
+<%= form_for [@employee, TimeEntry.new] do |f| %>
+  <%= f.label :customer %>
+  <%= f.collection_select(:customer_id, Customer.all, :id, :name) %>
+  <%= f.label :time %>
+  <%= f.number_field :time %>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,16 @@
+<h1>Employees#index</h1>
+
+<table>
+  <% @employees.each do |employee| %>
+  <tr>
+    <td><%= link_to employee.name, employee %></td>
+  </tr>
+  <% end %>
+</table>
+
+
+<%= form_for Employee.new do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>

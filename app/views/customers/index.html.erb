@@ -1,0 +1,9 @@
+<h1>Customers#index</h1>
+
+<table>
+  <% @customers.each do |customer| %>
+  <tr>
+    <td><%= link_to customer.name, customer %></td>
+  </tr>
+  <% end %>
+</table>
