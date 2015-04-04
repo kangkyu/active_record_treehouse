@@ -1,6 +1,7 @@
 class TimeEntriesController < ApplicationController
   def create
-    @time_entry = TimeEntry.create(params.require(:time_entry).permit(:customer_id, :time))
+    employee = Employee.find(params[:employee_id])
+    @time_entry = employee.time_entries.create(params.require(:time_entry).permit(:customer_id, :time))
     @customer = Customer.find(params[:time_entry][:customer_id])
     redirect_to @customer
 

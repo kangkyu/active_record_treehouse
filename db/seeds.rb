@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Employee.delete_all
 Employee.create([
   {
     name: 'Samson',
@@ -24,6 +25,7 @@ Employee.create([
   }
 ])
 
+Customer.delete_all
 Customer.create([
   {
     name: 'Mike',
