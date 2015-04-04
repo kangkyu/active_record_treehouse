@@ -1,6 +1,6 @@
 <h2><%= @customer.name %></h2>
 
-<p>Total Time</p><p><%= @customer.time_entries.sum(:time) %></p>
+<p>Total Time</p><p><%= @customer.total_hours %></p>
 <p>Total Cost</p><p><%= (@customer.time_entries.map &:cost).sum %></p>
 
 <p><%= @customer.inspect %></p>
