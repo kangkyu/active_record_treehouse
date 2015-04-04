@@ -24,3 +24,23 @@ and [submit] user screen moves to...
 
 user goes to a customer detail page  
 and the customer detail pages shows total time and cost  
+
+
+###make models  
+(make tables - mysql)  
+  
+customers  
+employees  
+  
+time_entries  
+  
+  
+make ["Customer" model and "Employee" model] subclass ["Account" model] and share one ["accounts" table]  
+  
+remove_old_tables  
+"Customer is not a subclass of Account"  
+  
+make ["TimeEntry" model] subclass ["AccountEntry" model] and use ["account_entries" table]  
+  
+remove_another_table  
+"ActiveRecord::SubclassNotFound: Invalid single-table inheritance type: TimeEntry"  
