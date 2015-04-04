@@ -8,8 +8,7 @@ class EmployeesController < ApplicationController
   end
 
   def create
-    @employee = Employee.new(params.require(:employee).permit(:name))
-    @employee.save
-    redirect_to employees_url
+    employee = Employee.create(params.require(:employee).permit(:name))
+    redirect_to employee
   end
 end
